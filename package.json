@@ -10,8 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "directory": "bridge",
-    "url": "git+https://github.com/arcaelas/arcaelas.git"
+    "url": "git+ssh://github.com/Arcaelas-Insiders-ES/bridge.git"
   },
   "keywords": [
     "serverless",
