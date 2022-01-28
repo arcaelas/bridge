@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "watch": "webpack --config ./webpack.config.test.js",
-    "commit": "npm publish --access=public && rm -rf ./src ./lib",
-    "prepublishOnly": "webpack --config ./webpack.config.js && npm version minor"
+    "prepublishOnly": "webpack --config ./webpack.config.js && npm version minor",
+    "postpublish": "rm -rf ./src ./lib"
   },
   "repository": {
     "type": "git",
