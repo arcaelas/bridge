@@ -23,3 +23,21 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: rm -rf ./src ./lib
+
+  github-update-package:
+    name: Github Update
+    runs-on: ubuntu-latest
+    environment: npm
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+      - run: git config --global user.name "Alejandro Reyes"
+      - run: git config --global user.email "arcaela.reyes@gmail.com"
+      - run: git add .
+      - run: git commit -m "Update Version"
+      - run: git push
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
