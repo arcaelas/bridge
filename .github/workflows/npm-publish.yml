@@ -17,7 +17,7 @@ jobs:
       - run: git config --global user.name "Alejandro Reyes"
       - run: git config --global user.email "arcaela.reyes@gmail.com"
       - run: npm install
-      - run: git add-commit -m 'Update Versions'
+      - run: git commit -am 'Update Versions'
       - run: npm publish --access=public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
