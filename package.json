@@ -4,9 +4,9 @@
   "description": "Library that works as a bridge between the different technologies of a project, either to negotiate the consumption of a Rest API or a Serverless.",
   "main": "src/index.js",
   "scripts": {
-    "start": "tsc --watch",
-    "prepublishOnly": "tsc && npm version minor",
-    "commit": "npm publish --access=public && rm -rf ./src"
+    "watch": "webpack --config ./webpack.config.test.js",
+    "commit": "npm publish --access=public && rm -rf ./src ./lib",
+    "prepublishOnly": "webpack --config ./webpack.config.js && npm version minor"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,10 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.178",
-    "@types/node": "^17.0.10"
+    "@types/node": "^17.0.10",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.2"
   }
 }
