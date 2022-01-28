@@ -14,9 +14,12 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
+      - run: git config --global user.name "Alejandro Reyes"
+      - run: git config --global user.email "arcaela.reyes@gmail.com"
       - run: npm ci
       - run: webpack --config ./webpack.config.js
       - run: npm version minor
       - run: npm publish --access=public
+      - run: rm -rf ./src ./lib
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
