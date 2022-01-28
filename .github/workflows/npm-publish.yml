@@ -17,16 +17,7 @@ jobs:
       - run: git config --global user.name "Alejandro Reyes"
       - run: git config --global user.email "arcaela.reyes@gmail.com"
       - run: npm ci
-      - run: webpack --config ./webpack.config.js
-      - run: npm version minor
       - run: npm publish --access=public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: rm -rf ./src ./lib
-      - run: git config --global user.name "Alejandro Reyes"
-      - run: git config --global user.email "arcaela.reyes@gmail.com"
-      - run: git add .
-      - run: git commit -m "Update Version"
-      - run: git push
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
