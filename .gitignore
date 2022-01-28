@@ -9,8 +9,6 @@
 
 # testing
 /tmp
-/@types
-/_esModule
 /coverage
 
 # misc
