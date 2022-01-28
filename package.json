@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "webpack --config ./webpack.config.test.js",
     "commit": "npm publish --access=public && rm -rf ./src ./lib",
-    "prepublishOnly": "webpack --config ./webpack.config.js && npm version minor"
+    "_prepublishOnly": "webpack --config ./webpack.config.js && npm version minor"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
