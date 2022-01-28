@@ -15,11 +15,8 @@ module.exports = [
         resolve: { extensions: ['.tsx', '.ts', '.js'], },
         output: {
             filename:'index.js',
-            globalObject:"this",
-            libraryTarget:"commonjs",
             path: path.resolve(__dirname, 'src')
         },
-        watch:Boolean( process.env.wp_watch ),
     },
 
     // Browser Compatibility

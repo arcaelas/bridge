@@ -1,5 +1,5 @@
-///<reference  path="node_modules/@arcaelas/xhrequest/index.ts" />
-import { Fatal, promify } from '@arcaelas/utils'
+import "@arcaelas/xhrequest";
+import { Fatal } from '@arcaelas/utils'
 const pathToRegex = require('path-to-regex');
 
 declare global {
