@@ -4,9 +4,7 @@
   "description": "Library that works as a bridge between the different technologies of a project, either to negotiate the consumption of a Rest API or a Serverless.",
   "main": "src/index.js",
   "scripts": {
-    "watch": "webpack --config ./webpack.config.test.js",
-    "prepublishOnly": "webpack --config ./webpack.config.js && npm version minor",
-    "postpublish": "rm -rf ./src ./lib"
+    "start": "webpack --config ./webpack.config.test.js"
   },
   "repository": {
     "type": "git",

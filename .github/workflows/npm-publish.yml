@@ -1,5 +1,4 @@
 name: NPM Release
-
 on:
   push:
     branches:
@@ -16,6 +15,8 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
+      - run: webpack --config ./webpack.config.js
+      - run: npm version minor
       - run: npm publish --access=public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
