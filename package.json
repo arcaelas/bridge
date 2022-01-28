@@ -1,10 +1,11 @@
 {
   "name": "@arcaelas/bridge",
-  "version": "1.12.0",
+  "version": "1.10.0",
   "description": "Library that works as a bridge between the different technologies of a project, either to negotiate the consumption of a Rest API or a Serverless.",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack --config ./webpack.config.test.js"
+    "start": "webpack --config ./webpack.config.test.js",
+    "prepublishOnly": "npm version minor && webpack --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
